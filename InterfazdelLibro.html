@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de libros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body> 
+    <div class="container" style="background-color: rgba(226, 192, 43, 0.708);">
+        <h1>Tienda de libros</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Registrar Libro</h2>
+    
+                <form>
+                    <div class="mb-3">
+                        <label for="isbn" class="form-label">ISBN</label>
+                        <input type="text" class="form-control" id="isbn">
+                    </div>
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="titulo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="precioCompra" class="form-label">Precio de compra</label>
+                        <input type="number" class="form-control" id="precioCompra">
+                    </div>
+                    <div class="mb-3">
+                        <label for="precioVenta" class="form-label">Precio de venta</label>
+                        <input type="number" class="form-control" id="precioVenta">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cantidad" class="form-label">Cantidad actual</label>
+                        <input type="number" class="form-control" id="cantidad">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar libro</button>
+                </form>
+                <hr>
+                <h2>Eliminar libro</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="buscarTitulo" class="form-label">ISBN</label>
+                        <input type="text" class="form-control" id="buscarTitulo">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Eliminar</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>Consultar</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="buscarTitulo" class="form-label">Buscar un libro por título</label>
+                        <input type="text" class="form-control" id="buscarTitulo">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </form>
+                <form>
+                    <div class="mb-3">
+                        <label for="buscarIsbn" class="form-label">Buscar por ISBN</label>
+                        <input type="text" class="form-control" id="buscarIsbn">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </form>
+                <hr>
+                <h2>Abastecer</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="abastecerIsbn" class="form-label">ISBN</label>
+                        <input type="text" class="form-control" id="abastecerIsbn">
+                    </div>
+                    <div class="mb-3">
+                        <label for="abastecerCantidad" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="abastecerCantidad">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Abastecer</button>
+                </form>
+                <hr>
+                <h2>Vender</h2>
+                <form>
+					<div class="mb-3">
+						<label for="venderIsbn" class="form-label">ISBN</label>
+						<input type="text" class="form-control" id="venderIsbn">
+					</div>
+					<div class="mb-3">
+						<label for="venderCantidad" class="form-label">Cantidad</label>
+						<input type="number" class="form-control" id="venderCantidad">
+					</div>
+					<button type="submit" class="btn btn-primary">Vender</button>
+				</form>
+                <hr>
+                <h2>Otras búsquedas</h2>
+                <form>
+                    <label for="" class="form-label"></label>
+                        <select class="form-select" id="id-select-libro" name="libro" required>
+                            <option value="">----</option>
+                            <option value="MAS COSTOSO">LIBRO MÁS COSTOSO</option>
+                            <option value="MENOS">LIBRO MENOS COSTOSO</option>
+                            <option value="VENDIDO">LIBRO MÁS VENDIDO</option>
+                    </select>
+                </form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Libros en stock</h2>
+				<table class="table">
+					<thead>
+						<tr class = "table-info">
+							<th scope="col">ISBN</th>
+							<th scope="col">Título</th>
+							<th scope="col">Precio de compra</th>
+							<th scope="col">Precio de venta</th>
+							<th scope="col">Cantidad actual</th>
+						</tr>
+					</thead>
+					<tbody>
+                        <tr class="table-primary">
+							<td>63701</td>
+							<td>Oscuros</td>
+							<td>100$</td>
+							<td>150$</td>
+							<td>145</td>
+						</tr>
+                        <tr class = "table-danger">
+							<td>10044</td>
+							<td>Boulevard</td>
+							<td>7.5$</td>
+							<td>9.45$</td>
+							<td>214</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	    </div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>	
